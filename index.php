@@ -8,7 +8,6 @@
 </head>
 <body>
 <?php
-    // Limit 3x Telpon Setiap Satu Nomor
     function send($phone)
     {
         $ch = curl_init();
@@ -21,14 +20,13 @@
         curl_setopt($ch, CURLOPT_POSTFIELDS, "msisdn=$phone&accept=call");
         $asw = curl_exec($ch);
         curl_close($ch);
-        // echo $asw."\n";
     }
     
-    $nomor   = trim(fgets(STDIN));
     $execute = send($_POST['nomor']);
 ?>
 <h1>Prank Panggilan Masuk (V.1) by <a href="https://laluzulfakar.com/">Pe Jung Labs</a></h1>
-<center><iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
+<center>
+	<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
 	<form action="" method="POST">
 		<table align="center">
 			<tr>
@@ -43,6 +41,7 @@
 			</tr>
 		</table>
 	</form>
-	<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe></center>
+	<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
+</center>
 </body>
 </html>
