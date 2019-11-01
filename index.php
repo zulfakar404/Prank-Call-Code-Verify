@@ -24,24 +24,38 @@
     
     $execute = send($_POST['nomor']);
 ?>
-<h1>Prank Panggilan Masuk (V.1) by <a href="https://laluzulfakar.com/">Pe Jung Labs</a></h1>
-<center>
+<?php if (isset($_POST['proses']))
+    {
+?>
+<h2 align='center'>
+	Terima kasih, nomor <?php echo $_POST['nomor']; ?> akan segera kami hubungi!
 	<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
-	<form action="" method="POST">
-		<table align="center">
-			<tr>
-				<th>Masukan Nomor Korban:</th>
-				<th></th>
-			</tr>
-			<tr>
-				<td><input type="text" name="nomor"></td>
-				<td>
-					<button type="submit">Gaskeun Mang</button>
-				</td>
-			</tr>
-		</table>
-	</form>
 	<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
-</center>
+	<h2>
+        <?php
+            }
+            else { ?>
+				<h1>Prank Panggilan Masuk (V.1) by <a href="https://laluzulfakar.com/">Pe Jung Labs</a></h1>
+				<center>
+					<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
+					<form action="" method="POST">
+						<table align="center">
+							<tr>
+								<th>Masukan Nomor Korban:</th>
+								<th></th>
+							</tr>
+							<tr>
+								<td><input type="text" name="nomor"></td>
+								<td>
+									<button name="proses" type="submit">Gaskeun Mang</button>
+								</td>
+							</tr>
+						</table>
+					</form>
+					<iframe data-aa="1144841" src="//acceptable.a-ads.com/1144841" scrolling="no" style="border:0px; padding:0; width: 100%; height: 100%; overflow:hidden" allowtransparency="true"></iframe>
+				</center>
+                <?php
+            }
+        ?>
 </body>
 </html>
